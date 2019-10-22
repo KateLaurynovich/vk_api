@@ -1,0 +1,94 @@
+Имеется тестовый пользователь. Нужно разработать автоматический тест c возможностями запуска на Firefox и Google Chrome по следующему сценарию:
+
+email -  autoperftester@gmail.com
+password -  PuV6j_.2&$m9h?UYY
+token - 1b3e1a6668a3cf952a48c40900e2e6672f27919b2bdb4e663ab24eb42300776a80fc388001bd30a5653c3
+
+
+
+%JIRAID%_%username_в_формате_i.ivanov%_%название_задания_из_jira_задачи_латинскими_буквами%
+
+ A1QASEA-3549_e.lavrinovich_SMART_VK_API_2
+
+1  [UI] Перейти на сайт https://vk.com/
+2  [UI] Авторизоваться
+3  [UI] Перейти на "Мою страницу"
+4  [API] С помощью запроса к API создать запись со случайно сгенерированным текстом на стене и получить id записи из ответа
+5  [UI] Не обновляя страницу убедиться, что на стене появилась запись с нужным текстом от правильного пользователя
+
+6  [API] Отредактировать запись через запрос к API - изменить текст и добавить (загрузить) любую картинку.
+
+7  [UI] Не обновляя страницу убедиться, что изменился текст сообщения и добавилась загруженная картинка(убедиться, что картинки одинаковые)
+
+8  [API] Используя запрос к API добавить комментарий к записи со случайным текстом
+
+9  [UI] Не обновляя страницу убедиться, что к нужной записи добавился комментарий от правильного пользователя
+
+10 [UI] Через UI оставить лайк к записи.
+
+11 [API] Через запрос к API убедиться, что у записи появился лайк от правильного пользователя
+
+12 [API] Через запрос к API удалить созданную запись
+13 [UI] Не обновляя страницу убедиться, что запись удалена
+
+  ! Просьба не менять пароль к учётной записи
+3ff626c99498fd2c878c7a0daa9914f0
+3ff626c99498fd2c878c7a0daa9914f0
+ id  post 44352
+ wpt381108928_44365
+381108928
+Дополнительные требования:
+
+В процессе разработки теста самостоятельно реализовать VkApiUtils класс для работы с запросами
+Тест должен запускаться как на англо-, так и на русскоязычной версии сайта.
+! Запрещается использовать готовые библиотеки для работы с VK API. Требуется реализовать свою с использованием GET/POST запросов
+
+
+{"response":[{"id":457255938,
+"album_id":-14,
+"owner_id":381108928,
+"sizes":[
+{"type":"s","url":"https:\/\/sun9-69.userapi.com\/c853524\/v853524276\/12b47f\/-_eXddqBdlo.jpg","width":75,"height":50},
+{"type":"m","url":"https:\/\/sun9-34.userapi.com\/c853524\/v853524276\/12b480\/Z5L6FgIInzk.jpg","width":130,"height":87},
+{"type":"x","url":"https:\/\/sun9-29.userapi.com\/c853524\/v853524276\/12b481\/Th3AfzYiDr8.jpg","width":604,"height":402},
+{"type":"y","url":"https:\/\/sun9-62.userapi.com\/c853524\/v853524276\/12b482\/52ACudu73T8.jpg","width":615,"height":409},
+{"type":"o","url":"https:\/\/sun9-62.userapi.com\/c853524\/v853524276\/12b483\/YnSRF_zQAs8.jpg","width":130,"height":87},
+{"type":"p","url":"https:\/\/sun9-56.userapi.com\/c853524\/v853524276\/12b484\/ta7UYot3oII.jpg","width":200,"height":133},
+{"type":"q","url":"https:\/\/sun9-56.userapi.com\/c853524\/v853524276\/12b485\/Du0QWTFwG68.jpg","width":320,"height":213},
+{"type":"r","url":"https:\/\/sun9-25.userapi.com\/c853524\/v853524276\/12b486\/UY6zH1ue43A.jpg","width":510,"height":340}],
+"text":"",
+"date":1571147901,
+"access_key":"ecfe7cdb1088acc049"}]}
+
+
+
+
+
+
+
+//
+//private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+//    public static void main(String[] args) throws IOException, URISyntaxException, ParseException {
+////        PropertiesManager.loadProperties("config");
+////        HttpResponse response = connectResponse();
+////        HttpEntity entity = response.getEntity();
+//
+////        System.out.println(EntityUtils.toString(entity));
+////        String string = EntityUtils.toString(entity);
+//        String string = "{\"response\":{\"post_id\":44341}}";
+//        System.out.println(string);
+//        Gson g = new Gson();
+////        Response p = g.fromJson(string, Response.class);
+////        System.out.println(p.getPostID().getPost_id());
+//
+////        JSONParser parser = new JSONParser();
+////        JSONObject json = (JSONObject) parser.parse(string);
+//        Response res = new ObjectMapper().readValue(string, Response.class);
+//        System.out.println(res.getResponse().getPost_id());
+//
+//
+//
+////        postModel id = GSON.fromJson(JsonElement"{\"response\":{\"post_id\":44337}}", postModel.class );
+////        System.out.println(id.getPost_id());
+//
+//    }
